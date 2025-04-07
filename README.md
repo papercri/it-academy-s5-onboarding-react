@@ -1,54 +1,128 @@
-# React + TypeScript + Vite
+# 📝 Proyecto: Onboarding Digital (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🎯 Descripción
 
-Currently, two official plugins are available:
+Esta aplicación es una práctica para aplicar los fundamentos básicos de **React** desarrollando un Onboarding digital. A través de una serie de pantallas, se muestra contenido con texto e imágenes, y el usuario puede navegar entre ellas mediante botones de "Siguiente" y "Anterior".
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El objetivo es familiarizarse con el uso de componentes, `useState`, props, renderizado condicional y estructuras de carpetas en React.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠 Cómo instalar y ejecutar el proyecto
+
+Sigue estos pasos para descargar e iniciar el proyecto en tu máquina local:
+
+### 1. 📦 Clonar el repositorio
+
+```bash
+git clone https://github.com/papercri/it-academy-s5-onboarding-react.git
+cd it-academy-s5-onboarding-react
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. 📁 Instalar dependencias
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Asegúrate de tener [Node.js](https://nodejs.org/) instalado. Luego, ejecuta:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+
+### 3. ▶️ Ejecutar la aplicación en modo desarrollo
+
+```bash
+npm run dev
+```
+
+Esto abrirá la aplicación en tu navegador en la dirección:
+
+```
+http://localhost:5173/
+```
+
+> 💡 Si no se abre automáticamente, copia y pega la URL manualmente en tu navegador.
+
+---
+
+
+## 📁 Estructura del proyecto
+
+```
+src/
+├── assets/              # Imágenes y recursos estáticos
+├── components/          # Componentes reutilizables como Card e Indicator
+├── data/                # Datos del onboarding (tutorialData.ts)
+├── types/               # Tipos TypeScript (como Step.ts)
+├── App.tsx              # Componente principal
+└── main.tsx             # Punto de entrada de React
+```
+
+---
+
+## ✅ Ejercicios por niveles
+
+### 🔹 Nivel 1
+
+#### 🧩 Ejercicio 1: Mostrar el primer paso
+1. Crear el componente `Card`.
+2. Cargar el componente `Card` dentro de `App`.
+3. Definir el array `tutorialData` con los pasos del onboarding.
+4. Crear estado `step` con `useState` para saber en qué paso estamos.
+5. Pasar los datos del paso actual al componente `Card` por props.
+6. Mostrar título y descripción en `Card`.
+
+#### 🧩 Ejercicio 2: Avanzar entre pasos
+1. Crear la función `nextStep` en `App.tsx`.
+2. Pasar `nextStep` como prop al componente `Card`.
+3. Llamar a `nextStep` al hacer clic en el botón en `Card`.
+
+#### 🧩 Ejercicio 3: Maquetar Card de forma responsive
+- Utilizar estilos y adaptar `Card` a pantallas móviles.
+
+#### 🧩 Ejercicio 4: Retroceder paso
+1. Crear función `prevStep` en `App.tsx`.
+2. Pasar `prevStep` al componente `Card`.
+3. Usar renderizado condicional para mostrar/ocultar botones:
+   - Paso 1: solo botón "Siguiente".
+   - Paso 2: botones "Siguiente" y "Anterior".
+   - Paso 3: solo botón "Anterior".
+
+#### 🧩 Ejercicio 5: Indicador de paso
+1. Crear componente `Indicator`.
+2. Cargar `Indicator` dentro de `Card`.
+3. Pasar `step` actual y longitud de `tutorialData` como props.
+4. Renderizar bolitas dinámicamente con `.map()`.
+5. Resaltar la bolita activa con estilo diferente.
+
+---
+
+### 🔹 Nivel 2
+
+#### 🧩 Ejercicio 6: Clic en bolita para cambiar de paso
+- Al hacer clic en una bolita del `Indicator`, se mostrará el paso correspondiente.
+
+---
+
+### 🔹 Nivel 3
+
+#### 🧩 Ejercicio 7: Animaciones
+- Crear animación al cambiar de paso:
+  - La imagen actual desaparece a la izquierda.
+  - La siguiente aparece desde la derecha.
+- Animar también el cambio en el indicador.
+
+---
+
+
+## 🚀 Tecnologías utilizadas
+
+- React con Vite
+- TypeScript
+- CSS Modules o Tailwind (según preferencia)
+- Hooks (`useState`, `useEffect`)
+- Props y composición de componentes
+
+---
+
+
+
