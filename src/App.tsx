@@ -10,22 +10,22 @@ type Pasos = {
 
 const tutorialData: Pasos[] = [
   {
-    title: 'Bienvenido a la app',
-    description: 'Aquí aprenderás a usar la aplicación paso a paso.',
+    title: 'Dedica moltes hores',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     bgColor: '#4EA2AA',
-    image: 'https://via.placeholder.com/200x100?text=Paso+1',
+    image: '#',
   },
   {
-    title: 'Gestiona tus tareas',
-    description: 'Puedes añadir, editar y borrar tareas fácilmente.',
+    title: 'Programa projects propis',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     bgColor: '#D3D4DA',
-    image: 'https://via.placeholder.com/200x100?text=Paso+2',
+    image: '#',
   },
   {
-    title: '¡Comienza ahora!',
-    description: 'Ya estás listo para empezar a usar la app.',
+    title: 'Procura descansar',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     bgColor: '#FFD267',
-    image: 'https://via.placeholder.com/200x100?text=Paso+3',
+    image: '#',
   },
 ];
 
