@@ -9,6 +9,7 @@ lerna-debug.log*
 Playground.tsx
 Playground.css
 
+.vscode
 node_modules
 dist
 dist-ssr

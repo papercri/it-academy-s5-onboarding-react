@@ -1,47 +1,33 @@
 import { useState } from 'react';
 import Card from './components/Card';
-
-type Pasos = {
-  title: string;
-  description: string;
-  bgColor: string;
-  image: string;
-};
-
-const tutorialData: Pasos[] = [
-  {
-    title: 'Dedica moltes hores',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    bgColor: '#4EA2AA',
-    image: '#',
-  },
-  {
-    title: 'Programa projects propis',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    bgColor: '#D3D4DA',
-    image: '#',
-  },
-  {
-    title: 'Procura descansar',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    bgColor: '#FFD267',
-    image: '#',
-  },
-];
+import tutorialData from './data/tutorialData';
+import './styles/App.css';
 
 function App() {
-  const [pIndex, setPIndex] = useState(0);
+  const [stepIndex, setStepIndex] = useState(0);
+
+  function nextStep() {
+    if (stepIndex < tutorialData.length - 1) {
+      setStepIndex(stepIndex + 1);
+    }
+  }
+  function prevStep() {
+    if (stepIndex > 0) {
+      setStepIndex(stepIndex - 1);
+    }
+  }
 
   return (
-    <>
       <Card
-        title={tutorialData[pIndex].title}
-        description={tutorialData[pIndex].description}
-        bgColor={tutorialData[pIndex].bgColor}
-        image={tutorialData[pIndex].image}
+        title={tutorialData[stepIndex].title}
+        description={tutorialData[stepIndex].description}
+        bgColor={tutorialData[stepIndex].bgColor}
+        image={tutorialData[stepIndex].image}
+        clickPrev={prevStep}
+        isFirst={stepIndex === 0}
+        clickNext = {nextStep}
+        isLast={stepIndex === tutorialData.length - 1}
       />
-  
-    </>
   );
 }
 
