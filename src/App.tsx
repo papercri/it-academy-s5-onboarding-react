@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Card from './components/Card';
-import tutorialData from './data/tutorialData';
+import { tutorialData } from './data/tutorialData';
 import './styles/App.css';
 
 function App() {

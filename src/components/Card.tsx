@@ -1,29 +1,23 @@
 
-type CardProps = {
-  title: string;
-  description: string;
-  bgColor: string;
-  image: string;
-  clickNext: () => void;
-  isLast: boolean;
-  clickPrev: () => void;
-  isFirst: boolean;
-};
+import { CardProps } from "../types/cardProps";
 
 function Card({ title, description, bgColor, image, clickNext, isLast, clickPrev, isFirst }: CardProps) {
   return (
     <>
-      <div style={{ backgroundColor: bgColor }}>
+    <div className="grid place-items-center min-h-screen">
+    <div style={{ backgroundColor: bgColor }}>
         <img src={image} alt={title} width={200} />
         <h2>{title}</h2>
         <p>{description}</p>
         <button onClick={clickPrev} disabled={isFirst}>
-          Previous
+          <span className="fa-solid fa-arrow-left"></span>
         </button>
         <button onClick={clickNext} disabled={isLast}>
-          Next
+          <span className="fa-solid fa-arrow-right"></span>
         </button>
       </div>
+    </div>
+      
     </>
   );
 }
