@@ -16,7 +16,9 @@ function App() {
       setStepIndex(stepIndex - 1);
     }
   }
-
+  function goToStep(index: number) {
+    setStepIndex(index);
+  }
   return (
       <Card
         title={tutorialData[stepIndex].title}
@@ -27,6 +29,8 @@ function App() {
         isFirst={stepIndex === 0}
         clickNext = {nextStep}
         isLast={stepIndex === tutorialData.length - 1}
+        currentStep={stepIndex}
+        goToStep={goToStep}
       />
   );
 }

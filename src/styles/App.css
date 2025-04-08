@@ -1,7 +1,7 @@
-button{
+.btn-prev, .btn-next{
     border:0;
     border-radius: 100px;
-    padding:10px 15px;
+    padding:8px 10px;
     font-size: 25px;
     height:auto;
     width:auto;
@@ -11,7 +11,7 @@ button{
 button:disabled {
    opacity: 0;
 }
-button.btn-next{
+.btn-next{
     background-color: var(--color-darkC);
     color: var(--color-lightC);
     transition: all 0.3s;
@@ -20,7 +20,7 @@ button.btn-next{
         color: var(--color-darkC);
     }
 }
-button.btn-prev{
+.btn-prev{
     background-color: var(--color-lightC);
     color: var(--color-darkC);
     transition: all 0.3s;
@@ -30,6 +30,27 @@ button.btn-prev{
         color: var(--color-lightC);
     }
 }
+.bullet {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: all  0.2s;
+    color: var(--color-darkC)
+  }
+  .bullet.active, .bullet.active:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    color: var(--color-darkC);
+    top:-1px
+    
+  }
+  .bullet:hover {
+    opacity: 1;
+    color: var(--color-blueC)
+  }
+ 
 .card{
     max-width:90%;
     height: 90vh;
@@ -43,7 +64,7 @@ button.btn-prev{
     }
 }
 
-.img{
+.card .img{
     border-radius: var(--radius-radius) var(--radius-radius) 0 0;
     width: 100%;
 }

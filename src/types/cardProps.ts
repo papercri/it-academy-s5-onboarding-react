@@ -7,5 +7,7 @@ export type CardProps = {
     isLast: boolean;
     clickPrev: () => void;
     isFirst: boolean;
+    currentStep: number;
+    goToStep: (index: number) => void;
   };
 
