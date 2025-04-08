@@ -1,0 +1,56 @@
+button{
+    border:0;
+    border-radius: 100px;
+    padding:10px 15px;
+    font-size: 25px;
+    height:auto;
+    width:auto;
+    cursor: pointer;
+    border: 1px solid var(--darkC);
+}
+button:disabled {
+   opacity: 0;
+}
+button.btn-next{
+    background-color: var(--darkC);
+    color: var(--lightC);
+    transition: all 0.3s;
+    &:hover {
+        background-color: var(--lightC);
+        color: var(--darkC);
+    }
+}
+button.btn-prev{
+    background-color: var(--lightC);
+    color: var(--darkC);
+    transition: all 0.3s;
+    &:hover {
+        background-color: var(--darkC);
+        color: var(--lightC);
+    }
+}
+.card{
+    max-width:90%;
+    height: 90vh;
+    border-radius: var(--radius);
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    h2{
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+}
+
+.img{
+    border-radius: var(--radius) var(--radius) 0 0;
+    width: 100%;
+}
+.desc{
+    background-color: white;
+    padding:0 20px 20px!important;
+    border-radius: 0 0 var(--radius) var(--radius);
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
