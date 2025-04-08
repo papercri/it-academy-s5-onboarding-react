@@ -1,6 +1,6 @@
 
 import { CardProps } from "../types/cardProps";
-import { tutorialData } from "../data/tutorialData";
+import  Indicator  from "./Indicator";
 
 function Card({ title, description, bgColor, image, clickNext, isLast, clickPrev, isFirst, currentStep, goToStep }: CardProps) {
   return (
@@ -17,17 +17,10 @@ function Card({ title, description, bgColor, image, clickNext, isLast, clickPrev
             </div>
             <div className="flex justify-between gap-2.5 mt-5">
               <div className="bullets flex justify-start gap-2.5 ">
-                <div className="bullets flex justify-start gap-2.5">
-                  {tutorialData.map((_, index) => (
-                    <button
-                      key={index}
-                      className={`bullet ${currentStep === index ? 'active' : ''}`}
-                      onClick={() => goToStep(index)}
-                    >
-                      <span className="fa-solid fa-circle !text-sm"></span>
-                    </button>
-                  ))}
-                </div>
+                <Indicator 
+                  currentStep={currentStep} 
+                  goToStep={goToStep} 
+                />
               </div>
               <div className="buttons flex justify-end gap-2.5 ">
                 <button onClick={clickPrev} disabled={isFirst} className="btn-prev">
