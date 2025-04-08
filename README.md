@@ -52,12 +52,21 @@ src/
 ├── assets/              # Imágenes y recursos estáticos
 ├── components/          # Componentes reutilizables como Card e Indicator
 ├── data/                # Datos del onboarding (tutorialData.ts)
+├── styles/              # Estilos CSS
 ├── types/               # Tipos TypeScript (como Step.ts)
 ├── App.tsx              # Componente principal
 └── main.tsx             # Punto de entrada de React
 ```
 
 ---
+
+## 🚀 Tecnologías utilizadas
+
+- React con Vite
+- TypeScript
+- Tailwind 
+- Hooks (`useState`, `useEffect`)
+- Props y composición de componentes
 
 ## ✅ Ejercicios por niveles
 
@@ -114,13 +123,7 @@ src/
 ---
 
 
-## 🚀 Tecnologías utilizadas
 
-- React con Vite
-- TypeScript
-- CSS Modules o Tailwind (según preferencia)
-- Hooks (`useState`, `useEffect`)
-- Props y composición de componentes
 
 ---
 

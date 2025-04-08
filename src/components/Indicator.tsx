@@ -1,7 +1,7 @@
-import { CardProps } from "../types/cardProps";
+import { IndicatorProps } from "../types/indicatorProps";
 import { tutorialData } from "../data/tutorialData";
 
-function Indicator({ currentStep, goToStep }: CardProps) {
+function Indicator({ currentStep, goToStep }: IndicatorProps) {
     return (
         <div className="bullets flex justify-start gap-2.5">
             {tutorialData.map((_, index) => (
