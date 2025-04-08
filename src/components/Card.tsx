@@ -5,7 +5,7 @@ function Card({ title, description, bgColor, image, clickNext, isLast, clickPrev
   return (
     <>
     <div className="grid place-items-center min-h-screen">
-      <div className="card grid grid-rows-[2fr_1fr] gap-4 shadow-2xl bg-white">
+      <div className="card grid grid-rows-[2fr_1fr] gap-4 shadow-2xl bg-white ">
         <div className="img flex justify-center items-center row-span-1" style={{ backgroundColor: bgColor }}>
           <img src={image} alt={title} />
         </div>

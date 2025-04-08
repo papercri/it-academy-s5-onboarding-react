@@ -1,10 +1,12 @@
-:root {
-  --lightC: #EBEBEB;
-  --darkC: #272727;
-  --blueC: #4DA2A9;
-  --greyC: #D3D4D9;
-  --yellowC: #FFD167;
-  --radius: 20px;
-}
+
+
 @import "tailwindcss";
-@import './src/styles/global.css';
+@import './src/styles/global.css'; 
+@theme {
+  --color-lightC: #EBEBEB;
+  --color-darkC: #272727;
+  --color-blueC: #4DA2A9;
+  --color-greyC: #D3D4D9;
+  --color-yellowC: #FFD167;
+  --radius-radius: 20px;
+}

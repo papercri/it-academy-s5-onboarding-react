@@ -9,6 +9,9 @@ export default {
         greyC: 'var(--greyC)',
         yellowC: 'var(--yellowC)',
       },
+      borderRadius: {
+        radius: 'var(--radius-radius)', 
+      },
     },
   },
   plugins: [],
