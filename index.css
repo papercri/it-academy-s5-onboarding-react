@@ -1,5 +1,8 @@
 @import "tailwindcss";
+
 @import './src/styles/global.css'; 
+
+
 @theme {
   --color-lightC: #EBEBEB;
   --color-darkC: #272727;

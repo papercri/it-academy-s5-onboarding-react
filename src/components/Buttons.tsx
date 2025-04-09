@@ -1,13 +1,15 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { ButtonsProps } from "../types/buttonsProps";
 
 function Buttons({ clickPrev, clickNext, isFirst, isLast }: ButtonsProps) {
     return (
         <>
             <button onClick={clickPrev} disabled={isFirst} className="btn-prev">
-            <span className="fa-solid fa-arrow-left"></span>
+            <FontAwesomeIcon icon={faArrowLeft} />
             </button>
             <button onClick={clickNext} disabled={isLast} className="btn-next">
-            <span className="fa-solid fa-arrow-right"></span>
+            <FontAwesomeIcon icon={faArrowRight} />
             </button>
         </>
     );

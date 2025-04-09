@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { IndicatorProps } from "../types/indicatorProps";
 import { tutorialData } from "../data/tutorialData";
 
@@ -9,7 +11,7 @@ function Indicator({ currentStep, toStep }: IndicatorProps) {
                 key={index}
                 className={`bullet ${currentStep === index ? 'active' : ''}`}
                 onClick={() => toStep(index)} >
-                <span className="fa-solid fa-circle !text-sm"></span>
+                <FontAwesomeIcon icon={faCircle} className="!text-sm"/>
             </button>
             ))}
         </div>
