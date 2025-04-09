@@ -65,6 +65,9 @@ src/
 - React con Vite
 - TypeScript
 - Tailwind 
+- Sass
+- Font Awersome
+- Google Fonts
 - Hooks (`useState`, `useEffect`)
 - Props y composición de componentes
 
