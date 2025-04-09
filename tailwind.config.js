@@ -12,6 +12,9 @@ export default {
       borderRadius: {
         radius: 'var(--radius-radius)', 
       },
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif'],
+      },
     },
   },
   plugins: [],

@@ -1,7 +1,6 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap";
 @import "tailwindcss";
-
 @import './src/styles/global.css'; 
-
 
 @theme {
   --color-lightC: #EBEBEB;
@@ -9,5 +8,8 @@
   --color-blueC: #4DA2A9;
   --color-greyC: #D3D4D9;
   --color-yellowC: #FFD167;
+
   --radius-radius: 20px;
+
+  --font-roboto: "Roboto", sans-serif; 
 }
