@@ -1,8 +1,9 @@
-
 import { CardProps } from "../types/cardProps";
+import Buttons from "./Buttons";
 import  Indicator  from "./Indicator";
+import '../styles/Card.css';
 
-function Card({ title, description, bgColor, image, clickNext, isLast, clickPrev, isFirst, currentStep, goToStep }: CardProps) {
+function Card({ title, description, bgColor, image, clickNext, isLast, clickPrev, isFirst, currentStep, toStep }: CardProps) {
   return (
     <>
       <div className="grid place-items-center min-h-screen">
@@ -19,16 +20,16 @@ function Card({ title, description, bgColor, image, clickNext, isLast, clickPrev
               <div className="bullets flex justify-start gap-2.5 ">
                 <Indicator 
                   currentStep={currentStep} 
-                  goToStep={goToStep} 
+                  toStep={toStep} 
                 />
               </div>
               <div className="buttons flex justify-end gap-2.5 ">
-                <button onClick={clickPrev} disabled={isFirst} className="btn-prev">
-                  <span className="fa-solid fa-arrow-left"></span>
-                </button>
-                <button onClick={clickNext} disabled={isLast} className="btn-next">
-                  <span className="fa-solid fa-arrow-right"></span>
-                </button>
+                <Buttons 
+                  clickPrev={clickPrev} 
+                  clickNext={clickNext} 
+                  isFirst={isFirst} 
+                  isLast={isLast} 
+                />
               </div>
             </div>
           </div>

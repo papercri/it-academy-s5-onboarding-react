@@ -1,4 +1,4 @@
 export type IndicatorProps = {
     currentStep: number;
-    goToStep: (index: number) => void;
+    toStep: (index: number) => void;
   };

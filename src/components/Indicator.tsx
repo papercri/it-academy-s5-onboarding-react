@@ -1,15 +1,14 @@
 import { IndicatorProps } from "../types/indicatorProps";
 import { tutorialData } from "../data/tutorialData";
 
-function Indicator({ currentStep, goToStep }: IndicatorProps) {
+function Indicator({ currentStep, toStep }: IndicatorProps) {
     return (
         <div className="bullets flex justify-start gap-2.5">
             {tutorialData.map((_, index) => (
             <button
                 key={index}
                 className={`bullet ${currentStep === index ? 'active' : ''}`}
-                onClick={() => goToStep(index)}
-            >
+                onClick={() => toStep(index)} >
                 <span className="fa-solid fa-circle !text-sm"></span>
             </button>
             ))}

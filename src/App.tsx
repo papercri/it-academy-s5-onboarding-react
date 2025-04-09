@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Card from './components/Card';
 import { tutorialData } from './data/tutorialData';
-import './styles/App.css';
 
 function App() {
   const [stepIndex, setStepIndex] = useState(0);
@@ -16,7 +15,7 @@ function App() {
       setStepIndex(stepIndex - 1);
     }
   }
-  function goToStep(index: number) {
+  function toStep(index: number) {
     setStepIndex(index);
   }
   return (
@@ -30,7 +29,7 @@ function App() {
         clickNext = {nextStep}
         isLast={stepIndex === tutorialData.length - 1}
         currentStep={stepIndex}
-        goToStep={goToStep}
+        toStep={toStep}
       />
   );
 }

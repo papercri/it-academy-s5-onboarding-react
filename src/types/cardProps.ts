@@ -8,6 +8,6 @@ export type CardProps = {
     clickPrev: () => void;
     isFirst: boolean;
     currentStep: number;
-    goToStep: (index: number) => void;
+    toStep: (index: number) => void;
   };
 
