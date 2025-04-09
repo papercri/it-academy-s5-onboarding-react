@@ -3,6 +3,7 @@ import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { IndicatorProps } from "../types/indicatorProps";
 import { tutorialData } from "../data/tutorialData";
 
+
 function Indicator({ currentStep, toStep }: IndicatorProps) {
     return (
         <div className="bullets flex justify-start gap-2.5">
