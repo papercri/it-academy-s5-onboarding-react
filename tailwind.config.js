@@ -15,6 +15,9 @@ export default {
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
       },
+      spacing: {
+        base: 'var(--spacing-base)'
+      }
     },
   },
   plugins: [],

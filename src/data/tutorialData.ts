@@ -9,19 +9,19 @@ export const tutorialData: Step[] = [
     {
       title: 'Dedica moltes hores',
       description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-      bgColor: '#4EA2AA',
+      bgColor: 'var(--color-blueC)',
       image: step1,
     },
     {
       title: 'Programa projects propis',
       description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-      bgColor: '#D3D4DA',
+      bgColor: 'var(--color-greyC)',
       image: step2,
     },
     {
       title: 'Procura descansar',
       description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-      bgColor: '#FFD267',
+      bgColor: 'var(--color-yellowC)',
       image: step3,
     },
   ];

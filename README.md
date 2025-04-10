@@ -64,12 +64,13 @@ src/
 
 - React con Vite
 - TypeScript
-- Tailwind 
+- Tailwind
 - Sass
 - Font Awersome
 - Google Fonts
-- Hooks (`useState`, `useEffect`)
+- Hooks (`useState`)
 - Props y composición de componentes
+- Full responsive
 
 ## ✅ Ejercicios por niveles
 
