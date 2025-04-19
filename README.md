@@ -1,5 +1,7 @@
 # 📝 Proyecto: Onboarding Digital (React)
 
+[Url del proyecto](https://react-carousel-sandy.vercel.app/)
+
 ## 🎯 Descripción
 
 Esta aplicación es una práctica para aplicar los fundamentos básicos de **React** desarrollando un Onboarding digital. A través de una serie de pantallas, se muestra contenido con texto e imágenes, y el usuario puede navegar entre ellas mediante botones de "Siguiente" y "Anterior".
